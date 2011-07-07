@@ -1,0 +1,26 @@
+#!/usr/bin/env ruby
+#
+# chatterfile
+# Hacked together with duct tape, hopes, and dreams by Aashay Desai / @aashay
+#
+# Uploads a file from the command line to Chatter, drops the URL into your clipboard
+#
+# Example:
+#
+#   chatterfile TPSReport.doc
+#
+# This requires the rest_client gem:
+#
+#   gem install rest_client
+#
+
+
+require 'rubygems'
+begin
+  require 'rest_client'
+rescue LoadError
+  puts "You need to install rest_client: gem install rest_client"
+  exit!(1)
+end
+
+
